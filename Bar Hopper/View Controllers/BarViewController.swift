@@ -32,12 +32,6 @@ class BarViewController: UIViewController, CLLocationManagerDelegate, UICollecti
         // Do any additional setup after loading the view.
         
         //set some attributes for side menu
-        /*
-        blurView.layer.cornerRadius = 15
-        blurView.layer.shadowColor = UIColor.black.cgColor
-        blurView.layer.shadowOpacity = 1
-        blurView.layer.shadowOffset = CGSize(width: 5, height: 0)
-        */
         viewConstraint.constant = -150
         
         collectionView.delegate = self

@@ -32,12 +32,6 @@ class PromotionsViewController: UIViewController, CLLocationManagerDelegate, UIC
         // Do any additional setup after loading the view.
         
         //set some attributes for side menu
-        /*
-        blurView.layer.cornerRadius = 15
-        blurView.layer.shadowColor = UIColor.black.cgColor
-        blurView.layer.shadowOpacity = 1
-        blurView.layer.shadowOffset = CGSize(width: 5, height: 0)
-         */
         viewConstraint.constant = -150
         
     
@@ -253,11 +247,14 @@ class PromotionsViewController: UIViewController, CLLocationManagerDelegate, UIC
         let name: String = promotionInfo["barName"]! as! String
         let start: String = promotionInfo["startDate"]! as! String
         let end: String = promotionInfo["endDate"]! as! String
+        let time: String = parseTime(startDate: start, endDate: end)
         let description: String = promotionInfo["description"]! as! String
+        let promotionName: String = promotionInfo["name"]! as! String
         
         cell.nameLabel.text = name
-        cell.timeLabel.text = start + " " + end
+        cell.timeLabel.text = time
         cell.descriptionLabel.text = description
+        cell.promotionTitle.text = promotionName
         
         return cell
     }

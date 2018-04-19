@@ -13,6 +13,7 @@ class PromotionsCollectionViewCell: UICollectionViewCell {
     @IBOutlet var nameLabel: UILabel!
     @IBOutlet var descriptionLabel: UILabel!
     @IBOutlet var timeLabel: UILabel!
+    @IBOutlet var promotionTitle: UILabel!
     
     
     
